@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #333;
+  background-color: white;
+  font-family: "Nunito", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.brand {
+  font-weight: bold;
+  display: flex;
+}
+
+.brand > a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.brand > a > img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.menu-open {
+  display: block;
+}
+
+.mobile-nav {
+  margin-left: auto;
+  display: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.navbar-fixed {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.control {
+  margin-right: auto;
+  display: flex;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  background-color: white;
+  padding: 20px;
+}
+
+nav > ul {
+  display: flex;
+  list-style: none;
+}
+
+nav > ul > li {
+  color: #55a25a;
+  list-style: none;
+  margin-right: 20px;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+  color: #55a25a;
+}
+
+nav > ul > li:last-child > a {
+  color: white;
+  background-color: #55a25a;
+  padding: 5px 20px;
+  border-radius: 50px;
+}
+
+nav > ul > li:last-child > a:hover {
+  opacity: 0.8;
+}
+
+#jumbotron {
+  display: flex;
+}
+
+#jumbotron,
+#hubungi-kami,
+#tentang,
+aside {
+  min-height: 100vh;
+}
+
+#jumbotron > div {
+  display: flex;
+  flec-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.jumbotron-item {
+  margin: 20px;
+}
+
+.jumbotron-item > h1 {
+  display: flex;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #55a25a;
+}
+
+.jumbotron-item > p {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.jumbotron-item > a {
+  color: white;
+  background-color: #55a25a;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.back-to-top {
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  bottom: 16px;
+  right: 16px;
+  z-index: 9999;
+  color: white;
+  background: #55a25a;
+  border-radius: 50%;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  cursor: pointer;
+}
+
+#tentang {
+  background-color: #333;
+  color: white;
+  padding: 100px 20px;
+}
+
+#tentang > h1,
+#hubungi-kami > h1,
+aside > h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#hubungi-kami {
+  background-color: white;
+  color: white;
+  padding: 100px 20px;
+}
+
+#hubungi-kami > h1 {
+  color: #55a25a;
+}
+
+#hubungi-kami > form > div > label {
+  color: #55a25a;
+  text-align: center;
+  display: flex;
+  font-size: 1.5rem;
+}
+
+aside {
+  background-color: #55a25a;
+  color: #55a25a;
+  padding: 100px 20px;
+}
+
+aside > h1 {
+  color: white;
+}
+
+aside > img {
+  width: 100%;
+  text-align: center;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+.back-to-top:hover {
+  opacity: 0.8;
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+footer > p > a {
+  text-decoration: none;
+  color: #55a25a;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 576px) {
+  nav {
+    display: block;
+  }
+  nav > ul {
+    margin-top: 20px;
+    display: none;
+  }
+  nav > ul > li {
+    text-align: center;
+    padding: 10px 0px;
+  }
+  .mobile-nav {
+    display: block;
+  }
+  #jumbotron {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #jumbotron > div {
+    display: block;
+    margin-top: 20px;
+  }
+  .jumbotron-item > h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #55a25a;
+  }
+  .jumbotron-item > img {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .jumbotron-item > p {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #jumbotron {
+    display: block;
+    padding-top: 50px;
+  }
+  #jumbotron > div {
+    display: block;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  nav {
+    padding: 20px 20%;
+  }
+  #jumbotron {
+    margin-top: -100px;
+  }
+  #jumbotron,
+  #hubungi-kami,
+  #tentang,
+  aside {
+    padding: 100px 20%;
+  }
+
+  aside > img {
+    width: 300px;
+  }
+}
+
+.scrollbar::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: white;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 0.5rem;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
