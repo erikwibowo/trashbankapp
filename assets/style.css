@@ -16,6 +16,19 @@ body {
   overflow-x: hidden;
 }
 
+.flex {
+  display: flex;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.min-h-full {
+  min-height: 100vh;
+}
+
 .brand {
   font-weight: bold;
   display: flex;
@@ -99,6 +112,7 @@ nav > ul > li:last-child > a:hover {
 #jumbotron,
 #hubungi-kami,
 #tentang,
+#berita,
 aside {
   min-height: 100vh;
 }
@@ -109,6 +123,27 @@ aside {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#tentang > h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 40px;
+}
+
+#tentang > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tentang-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
 
 .jumbotron-item {
@@ -147,20 +182,27 @@ aside {
   background: #55a25a;
   border-radius: 50%;
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
 #tentang {
-  background-color: #333;
+  background-color: #55a25a;
+}
+
+#berita {
+  background-color: white;
+}
+
+#tentang,
+#berita {
   color: white;
   padding: 100px 20px;
 }
 
 #tentang > h1,
 #hubungi-kami > h1,
+#berita > h1,
 aside > h1 {
   text-align: center;
   font-size: 2.5rem;
@@ -168,13 +210,13 @@ aside > h1 {
 }
 
 #hubungi-kami {
-  background-color: white;
+  background-color: #333;
   color: white;
   padding: 100px 20px;
 }
 
 #hubungi-kami > h1 {
-  color: #55a25a;
+  color: white;
 }
 
 #hubungi-kami > form > div > label {
@@ -185,13 +227,63 @@ aside > h1 {
 }
 
 aside {
-  background-color: #55a25a;
+  background-color: white;
   color: #55a25a;
   padding: 100px 20px;
 }
 
+#berita > h1,
 aside > h1 {
-  color: white;
+  color: #333;
+}
+
+.berita-item {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.card {
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-image > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body > small {
+  color: #55a25a;
+}
+
+.card-title > a {
+  font-size: 1.2rem;
+  color: #55a25a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card-p {
+  color: grey;
+}
+.card-p:after {
+  content: "...";
 }
 
 aside > img {
@@ -221,6 +313,39 @@ footer > p > a {
 }
 
 @media only screen and (max-width: 576px) {
+  #jumbotron,
+  .tentang-item,
+  .berita-item {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #jumbotron > div,
+  .tentang-item > div {
+    display: block;
+    margin-top: 20px;
+  }
+  .jumbotron-item > h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #55a25a;
+  }
+  .jumbotron-item > img {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .jumbotron-item > p {
+    font-size: 1.2rem;
+  }
+  #tentang > h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
   nav {
     display: block;
   }
@@ -237,35 +362,17 @@ footer > p > a {
   }
   #jumbotron {
     display: block;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  #jumbotron > div {
-    display: block;
-    margin-top: 20px;
-  }
-  .jumbotron-item > h1 {
-    font-size: 2.2rem;
-    font-weight: bold;
-    color: #55a25a;
-  }
-  .jumbotron-item > img {
-    width: 100%;
-    margin-top: 50px;
-  }
-  .jumbotron-item > p {
-    font-size: 1.2rem;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  #jumbotron {
-    display: block;
     padding-top: 50px;
   }
   #jumbotron > div {
     display: block;
     margin-top: 20px;
+  }
+  .berita-item {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
   }
 }
 
@@ -279,6 +386,7 @@ footer > p > a {
   #jumbotron,
   #hubungi-kami,
   #tentang,
+  #berita,
   aside {
     padding: 100px 20%;
   }
