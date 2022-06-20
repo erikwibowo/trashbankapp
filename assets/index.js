@@ -17,8 +17,9 @@ window.onscroll = function () {
   }
 };
 
+// open/close menu mobile
 let menu = document.querySelector(".mobile-nav");
 let nav = document.querySelector(".nav");
-menu.addEventListener("click", function () {
+menu.addEventListener("click", function (e) {
   nav.classList.toggle("menu-open");
 });

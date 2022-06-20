@@ -21,6 +21,7 @@ body {
 }
 
 .center {
+  text-align: center;
   justify-content: center;
   align-items: center;
 }
@@ -226,6 +227,43 @@ aside > h1 {
   font-size: 1.5rem;
 }
 
+.hubungi-kami-content {
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+}
+
+iframe {
+  border-radius: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="submit"],
+textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 15px;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+  border: 1px solid black;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #55a25a;
+  color: white;
+  padding: 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+input[type="text"]:focus {
+  border: 3px solid #555;
+}
+
 aside {
   background-color: white;
   color: #55a25a;
@@ -286,11 +324,42 @@ aside > h1 {
   content: "...";
 }
 
-aside > img {
-  width: 100%;
+aside img {
+  width: 40%;
   text-align: center;
   border-radius: 50%;
   border: 5px solid white;
+}
+
+aside > div {
+  margin-top: 10%;
+}
+
+aside h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+aside q {
+  color: #333;
+  font-size: 1.2rem;
+  style: italic;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.social-media img {
+  width: 30px;
+  height: 30px;
+  color: white;
+  padding: 10px;
 }
 
 .back-to-top:hover {
@@ -343,6 +412,12 @@ footer > p > a {
     margin-top: 0px;
     margin-bottom: 0px;
   }
+  aside img {
+    width: 60%;
+    text-align: center;
+    border-radius: 50%;
+    border: 5px solid white;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -374,6 +449,12 @@ footer > p > a {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
   }
+  .hubungi-kami-content {
+    display: block;
+  }
+  iframe {
+    margin-top: 20px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -393,6 +474,14 @@ footer > p > a {
 
   aside > img {
     width: 300px;
+  }
+
+  aside h2 {
+    font-size: 2.5rem;
+  }
+
+  aside q {
+    font-size: 2rem;
   }
 }
 
